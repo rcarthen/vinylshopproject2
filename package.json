@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rcarthen/vinylshopproject2#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^1.6.1",
     "sequelize": "^4.41.0"
   }

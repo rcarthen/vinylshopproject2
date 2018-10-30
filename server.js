@@ -141,10 +141,9 @@ db.sequelize.sync({}).then(function() {
   });
 
   db.userlogin.create({
-  	name: 'Sallie Mae',
+  	username: 'Sallie Mae',
   	email: 'abclol@aol.com',
     password: 'yougotthis',
-    quantity: 100
   }).then(function(response) {
   	console.log('Data added!')
   }).catch(function(error) {

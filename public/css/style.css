@@ -1,0 +1,14 @@
+.nav-wrapper {
+    background-color: #3b2572 !important;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e14705;
+  }
+
+  .btn-large waves-effect waves-light{ background-color: #529f82;
+
+  }
+
+  .carousel .carousel-item {
+    width:340px !important;}
+  
