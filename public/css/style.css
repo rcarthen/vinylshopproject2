@@ -1,14 +1,13 @@
 .nav-wrapper {
-    background-color: #3b2572 !important;
+    background-color: #3b2572;
     font-size: 14px;
-    font-weight: bold;
-    color: #e14705;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  .btn-large waves-effect waves-light{ background-color: #529f82;
+  .btn-large waves-effect waves-light{ background-color: #e14705 !important;
 
   }
 
   .carousel .carousel-item {
-    width:340px !important;}
+    width:350px !important;}
   
