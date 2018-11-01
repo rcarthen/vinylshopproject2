@@ -20,6 +20,16 @@ const router= express.Router();
       res.sendFile(path.join(__dirname, '/../public/legacy.html'));
     });
 
+    router.get('/wishlist', function(req, res) {
+      res.sendFile(path.join(__dirname, '/../public/wishlist.html'));
+    });
+
+    router.get('/signin', function(req, res) {
+      res.sendFile(path.join(__dirname, '/../public/signin.html'));
+    });
+
+
+
 
 
 

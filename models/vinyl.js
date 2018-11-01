@@ -1,10 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
-  const products = sequelize.define('vinyl', {
-    product_name: {
+  const Vinyl = sequelize.define('Vinyl', {
+    vinyl_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    department_name: {
+    artist: {
+      type: DataTypes.STRING,
+      allowNull:false
+    },
+
+    genre: {
       type: DataTypes.STRING,
       allowNull:false
     },
@@ -12,10 +17,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
     
     },
-    stock_quanity: {
+    quantity: {
       type: DataTypes.INTEGER,
+    },
+
+    image: {
+    type: DataTypes.STRING,
     }
   });
 
-  return products;
+  return Vinyl;
 }

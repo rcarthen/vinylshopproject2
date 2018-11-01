@@ -25,3 +25,6 @@ $('#button name').on('click', function(req, res){
   console.log('');
 });
 
+$(document).ready(function() {
+  $('select').material_select();
+});
