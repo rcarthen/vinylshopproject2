@@ -92,3 +92,17 @@ const items = [
                 console.log('\n\nError:', err);
             });
         });
+
+
+
+        // db.userlogin.create({
+        //     username: 'Sallie Mae',
+        //     email: 'abclol@aol.com',
+        //   password: 'yougotthis',
+        // }).then(function(response) {
+        //     console.log('Data added!')
+        // }).catch(function(error) {
+        //     console.log('Error', error);
+        // });
+      
+      

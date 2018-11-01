@@ -11,3 +11,9 @@
   .carousel .carousel-item {
     width:350px !important;}
   
+     #footer{
+      background-color: #3b2572;
+      font-size: 14px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 240px;
+    }
