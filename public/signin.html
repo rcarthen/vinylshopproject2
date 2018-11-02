@@ -16,46 +16,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body id="bodylogin">
-  <div class="sigin">
-    <div class="row">
-        <form class="col s12" id="reg-form">
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate" required>
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate" required>
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate" required>
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate" minlength="6" required>
-              <label for="password">Password</label>
-            </div>
-          </div>
-
-    
-            <div id="signin" class="input-field col s6">
-              <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
-                <i class="material-icons right">done</i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a>
+<form>
+  <div class= "container" id="login">
+  <h3>VinylUrban</h3>
+  <i class="material-icons prefix">mail_outline</i>
+  <input placeholder="E-mail" type="email" required="">
+  <i class="material-icons prefix">lock_outline</i>
+  <input placeholder="Password" type="password" required="">
+  <div class="input-field col s12">
+      <a href="../shop" class="btn waves-effect waves-light col s12" id="loginbutton">Login</a>
     </div>
-  
-  
+  <div class="input-field col s12 m12 l12  login-text">
+      <input type="checkbox" id="remember-me" />
       
-</body>
+      <div class="input-field col s6 m6 l6">
+          <p class="margin medium-small"><a href="#">Register Now!</a></p>
+        </div>
+        <div class="input-field col s6 m6 l6">
+            <p class="margin right-align medium-small"><a href="#">Forgot password?</a></p>
+  </div>
+  </form>
+</div>
+
 </html>

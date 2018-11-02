@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Vinyl = sequelize.define('Vinyl', {
+  const vinyl = sequelize.define('vinyl', {
     vinyl_name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -26,5 +26,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Vinyl;
+  return vinyl;
 }

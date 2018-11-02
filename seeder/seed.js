@@ -83,7 +83,7 @@ const items = [
     {
         vinyl_name: 'The Doors',
         artist: 'The Doors',
-        genre: '',
+        genre: 'Rock',
         price: 170,
         quantity: 3,
         image: 'https://cdn.shopify.com/s/files/1/1103/7726/products/cvr_the-doors-original-album_front_1200_f7840a1b-e734-40d8-a5d2-6f52fee4fe20_1024x1024.jpg?v=1536270057'
@@ -104,8 +104,8 @@ const items = [
 ];
 
 
-db.sequelize.sync().then(function () {
-    db.Vinyl.bulkCreate(items).then(function (rows) {
+db.sequelize.sync({}).then(function () {
+    db.vinyl.bulkCreate(items).then(function (rows) {
         console.log('\n\nINSERTED\n\n');
     }).catch(function (err) {
         console.log('\n\nError:', err);
