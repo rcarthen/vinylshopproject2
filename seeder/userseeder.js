@@ -3,7 +3,8 @@ const db = require('../models');
 const userLogins = [
 
     {
-        username: 'Sallie Mae',
+        firstName: 'Sallie',
+        lastName: 'Mae',
         email: 'abclol@aol.com',
 password: 'yougotthis',
         
@@ -11,7 +12,8 @@ password: 'yougotthis',
 
 
     {
-        username: 'Ruth Anne',
+        firstName: 'Ruth',
+        lastName: 'Anne',
         email: 'lifeisgood@aol.com',
 password: 'sogood',
         
@@ -22,7 +24,7 @@ password: 'sogood',
 
 
 
-db.sequelize.sync().then(function () {
+db.sequelize.sync({force:true}).then(function () {
     db.userlogin.bulkCreate(userLogins).then(function (rows) {
         console.log('\n\nINSERTED\n\n');
     }).catch(function (err) {
