@@ -23,8 +23,14 @@ module.exports = function(sequelize, DataTypes) {
 
     image: {
     type: DataTypes.STRING,
+    },
+  
+
+  info: {
+    type: DataTypes.STRING,
     }
   });
+
 
   return vinyl;
 }

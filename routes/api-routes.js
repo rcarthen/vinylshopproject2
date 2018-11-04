@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../models");
 
 router.get('/api/vinyl', function (req, res) {
-  db.vinyl.findAll({}).then(function (response, error) {
+  db.vinyl.findAll({}).then(function (error, response) {
     if (error) {
       res.json(error)
     }
@@ -11,6 +11,18 @@ router.get('/api/vinyl', function (req, res) {
   })
 });
 
+router.get('/api/vinyl/:id', function(req,res) {
+
+  db.vinyl.findAll({where:{ id: req.params.id}}).then(function(error, response){
+    if (error){
+      res.json(error)
+    }
+
+    res.json(response)
+  })
+  // console.log(req.params.id)
+
+});
 
 router.get('/api/userlogin', function (req, res) {
   //res.json({hello:"world"})//send back to postman for test 

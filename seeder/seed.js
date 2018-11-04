@@ -140,7 +140,7 @@ const items = [
 
 ];
 
-db.sequelize.sync({force: true}).then(function () {
+db.sequelize.sync({}).then(function () {
     db.vinyl.bulkCreate(items).then(function (rows) {
         console.log('\n\nINSERTED\n\n');
     }).catch(function (err) {

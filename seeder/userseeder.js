@@ -6,7 +6,7 @@ const userLogins = [
         firstName: 'Sallie',
         lastName: 'Mae',
         email: 'abclol@aol.com',
-password: 'yougotthis',
+        password: 'yougotthis',
         
     },
 

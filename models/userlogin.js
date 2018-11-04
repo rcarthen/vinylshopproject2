@@ -1,9 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
     const userlogin = sequelize.define('userlogin', {
-      username: {
+      firstname: {
         type: DataTypes.STRING,
         allowNull: false
       },
+
+      lastname: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+
       email: {
         type: DataTypes.STRING,
         allowNull:false
@@ -13,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       
       }
      
-    });
+    },{timestamps:false});
   
     return userlogin;
   }
