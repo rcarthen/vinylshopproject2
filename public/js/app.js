@@ -115,7 +115,7 @@ $.ajax({
 
 
     $("#displayrow").append(
-      `<div class="card col s4">
+      `<div class="card col s6 m4">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="${image}">
           </div>

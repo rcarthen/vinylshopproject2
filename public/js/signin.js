@@ -1,12 +1,12 @@
 $( function() {
 
     // Getting references to the name input and author container, as well as the table body
-    const nameInput = $('#author-name');
-    const authorList = $('tbody');
-    const authorContainer = $('.author-container');
+    const email = $('#email');
+    const password = $('#password');
+  
   
     // A function to handle what happens when the form is submitted to create a new Author
-    const handleAuthorFormSubmit = function (event) {
+    const handleSignIn = function (event) {
       event.preventDefault();
       // Don't do anything if the name fields hasn't been filled out
       if (!nameInput.val().trim().trim()) {

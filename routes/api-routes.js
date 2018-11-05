@@ -24,6 +24,16 @@ router.get('/api/vinyl/:id', function(req,res) {
 
 });
 
+router.get('/api/vinyl/:name', function (req, res) {
+  db.vinyl.findAll({where:{id: req.params.id}}).then(function (error, response) {
+    if (error) {
+      res.json(error)
+    }
+    res.json(response)
+  })
+});
+
+
 router.get('/api/userlogin', function (req, res) {
   //res.json({hello:"world"})//send back to postman for test 
   //Products is the variable from the product.js
