@@ -14,15 +14,22 @@
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
-});
-
-$(document).ready(function () {
   $('.carousel').carousel();
+  $('select').formSelect();
+  
+
 });
 
 
 
-$('#displayrow').on('click', ".addtobag", function (event) {
+$('#displayrow').on('click', ".addtobag", function(event) {
+  event.preventDefault();
+
+  window.location.replace('/cart');
+});
+
+
+$('#displayrow').on('click', ".seeinfo", function (event) {
   event.preventDefault();
   console.log("I've been clicked");
   let vinylId = $(this).data("id");
@@ -45,23 +52,41 @@ $('#displayrow').on('click', ".addtobag", function (event) {
       let info = data.info
       let id = data.id
       $("#displayrow").append(
-        ` 
-        <div class="col m6"> 
-        <img src="${image}">
-        </div>
-<div class="col m6"> <h3>${vinyl_name}</h3>
-<h5>by ${artist}</h5>
-<h4>${"$"+ data.price} </h4>
-<div> ${info} </div>
+        
+      
+        `<div class="col s5 push-s7" id=cart> <span class="flow-text"> <img src="${image}"></span></div>
+       
+        <div class="col s7 pull-s5" id=title>
+        <h3>${vinyl_name}</h3>
+        <h5>by ${artist}</h5>
+        <h4>${"$"+ data.price} </h4>
+        <div> ${info} </div>
+        <span class="flow-text">
+        <br/>
+        
 
+<a class="waves-effect waves-light btn-large addtobag"  id="bag">ADD TO BAG</a>
 
-<a class="waves-effect waves-light btn-large" id=bag>ADD TO BAG</a>`
+<br/>
+
+<div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label>QTY</label>
+  </div>
+
+</div>`
+
 
       )
 
     }
 
-  })
+    $('select').formSelect();     })
 });
 
 $.ajax({
@@ -97,7 +122,7 @@ $.ajax({
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">${vinyl_name}<i class="material-icons right">more_vert</i></span>
             <p><a href="#"><i class="medium material-icons"></i></a></p>
-            <a class="waves-effect waves-teal btn-flat addtobag" data-id= ${id}>ADD TO BAG</a>
+            <a class="waves-effect waves-teal btn-flat seeinfo" data-id= ${id}>See Info</a>
           </div>
 
 
@@ -106,7 +131,7 @@ $.ajax({
             <span class="card-title grey-text text-darken-4">${vinyl_name}<i class="material-icons right">close</i></span>
             <p id="description">${info}</p>
             <div class="card-action">
-              <a class="waves-effect waves-teal btn-flat addtobag" data-id=${id}>ADD TO BAG</a>
+              <a class="waves-effect waves-teal btn-flat seeinfo" data-id=${id}>See Info</a>
               <div class="card col s10">
                 <div class="card-image waves-effect waves-block waves-light ">
                   <img class="activator" id="image" src="${image}">

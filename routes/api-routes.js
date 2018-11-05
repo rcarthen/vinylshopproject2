@@ -35,4 +35,12 @@ router.get('/api/userlogin', function (req, res) {
   })
 });
 
+
+router.post('/api/userlogin', function(req, res){db.Post.create(req.body).then(function(dbPost) {
+  res.json(dbPost);
+}).catch(function(error) {
+  res.json({ error: error });
+});
+});
+
 module.exports= router 

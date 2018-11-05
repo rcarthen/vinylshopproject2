@@ -28,6 +28,16 @@ const router= express.Router();
       res.sendFile(path.join(__dirname, '/../public/signin.html'));
     });
 
+    router.get('/register', function(req, res) {
+      res.sendFile(path.join(__dirname, '/../public/register.html'));
+    });
+
+
+
+    router.get('/cart', function(req, res) {
+      res.sendFile(path.join(__dirname, '/../public/cart.html'));
+    });
+
     
    
   

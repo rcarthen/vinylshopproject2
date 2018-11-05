@@ -1,6 +1,7 @@
 .nav-wrapper {
     background-color: #3b2572;
     font-size: 14px;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -27,4 +28,20 @@
 
    #bag{
      background-color: black;
+     
    }
+
+   #cart{
+
+  padding: 55px;
+   }
+
+
+   #title{
+
+    padding: 55px;
+     }
+
+     #checkout{
+       background-color:
+     }
