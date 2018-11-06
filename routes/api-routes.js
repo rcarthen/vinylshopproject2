@@ -81,7 +81,7 @@ router.delete('/api/cart/', function(req, res) {
 
 //delete individual item from the cart
 router.delete('/api/cart/:id', function(req, res) {
-  db.cart.destroy({
+  cart.destroy({
     where: {
       id: req.params.id
     }
