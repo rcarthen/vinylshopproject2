@@ -8,7 +8,8 @@ const items = [
         genre: 'Rock',
         price: 8000,
         quantity: 5,
-        image: 'https://images-na.ssl-images-amazon.com/images/I/61sBxjdG%2BzL._SS500.jpg'
+        image: 'https://images-na.ssl-images-amazon.com/images/I/61sBxjdG%2BzL._SS500.jpg',
+        info:'Yellow Submarine is the tenth studio album by English rock band the Beatles, released on 13 January 1969 in the United States and on 17 January 1969 in the United Kingdom. '
     },
 
     {
@@ -18,6 +19,7 @@ const items = [
         price: 35,
         quantity: 5,
         image: 'https://images-na.ssl-images-amazon.com/images/I/61TO3Ucwb4L._SS500.jpg'
+        
     },
 
     {
@@ -52,7 +54,8 @@ const items = [
         genre: 'Rhythm and Blues',
         price: 150,
         quantity: 5,
-        image: 'https://images-na.ssl-images-amazon.com/images/I/51E9w3xBTJL._SS500.jpg'
+        image: 'https://images-na.ssl-images-amazon.com/images/I/51E9w3xBTJL._SS500.jpg',
+        info: 'Whitney Houston is the debut studio album by American contemporary R&B and pop singer Whitney Houston.'
     },
 
     {
@@ -95,8 +98,8 @@ const items = [
         genre: 'Jazz',
         price: 400,
         quantity: 3,
-        image: 'https://images-na.ssl-images-amazon.com/images/I/51Spjdv-5tL._SS500.jpg',
-        info: 'Permanent Vacation is the ninth studio album by American rock band Aerosmith, released on August 21, 1987.'
+        image: 'https://images-na.ssl-images-amazon.com/images/I/41wQNS4R+AL._AC_US327_FMwebp_QL65_.jpg',
+    
     }
 
 
@@ -105,7 +108,7 @@ const items = [
 ];
 
 
-db.sequelize.sync({}).then(function () {
+db.sequelize.sync({force:true}).then(function () {
     db.vinyl.bulkCreate(items).then(function (rows) {
         console.log('\n\nINSERTED\n\n');
     }).catch(function (err) {

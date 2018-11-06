@@ -45,12 +45,55 @@ router.get('/api/userlogin', function (req, res) {
   })
 });
 
+router.get("/api/cart", function(req, res){
+  db.cart.findAll({}).then(function(response, error){
+    if (error) {
+      res.json(error)
+    }
+    res.json(response)
+  })
+});
 
-router.post('/api/userlogin', function(req, res){db.Post.create(req.body).then(function(dbPost) {
-  res.json(dbPost);
-}).catch(function(error) {
-  res.json({ error: error });
+
+//post items into cart
+router.post("/api/cart", function(req, res){
+  db.cart.create(req.body).then(function(response, error){
+    if (error) {
+      res.json(error)
+    }
+    res.json(response)
+  });
+})
+
+
+//remove all items from the cart
+
+router.delete('/api/cart/', function(req, res) {
+    db.cart.findAll({}).then(function(response, error){
+      if (error) {
+        res.json(error)
+      }
+      res.json(response)
+    })
+  });
+
+
+
+//delete individual item from the cart
+router.delete('/api/cart/:id', function(req, res) {
+  db.cart.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbCart) {
+    res.json(dbCart);
+  }).catch(function(error) {
+    res.json({ error: error });
+  });
 });
-});
+
+
+
+
 
 module.exports= router 

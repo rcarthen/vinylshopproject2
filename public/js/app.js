@@ -16,16 +16,31 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.carousel').carousel();
   $('select').formSelect();
-  
-
 });
 
 
 
 $('#displayrow').on('click', ".addtobag", function(event) {
   event.preventDefault();
-
+  //product quantity price 
+let product= $("#product").text()
+let quantity=$("#quantity").val()
+let price= $("#price").attr("data-price")
+console.log(product, quantity, price)
+$.ajax({ url: "/api/cart",
+  method: "POST",
+  data: {
+    product: product,
+    quantity: quantity,
+    price: price
+  }
+}) .then(function(data){ 
+  console.log(data);
   window.location.replace('/cart');
+}
+
+) 
+
 });
 
 
@@ -57,9 +72,9 @@ $('#displayrow').on('click', ".seeinfo", function (event) {
         `<div class="col s5 push-s7" id=cart> <span class="flow-text"> <img src="${image}"></span></div>
        
         <div class="col s7 pull-s5" id=title>
-        <h3>${vinyl_name}</h3>
+        <h3 id="product">${vinyl_name}</h3>
         <h5>by ${artist}</h5>
-        <h4>${"$"+ data.price} </h4>
+        <h4 id="price" data-price=${data.price}>${"$"+ data.price} </h4>
         <div> ${info} </div>
         <span class="flow-text">
         <br/>
@@ -70,9 +85,9 @@ $('#displayrow').on('click', ".seeinfo", function (event) {
 <br/>
 
 <div class="input-field col s12">
-    <select>
+    <select id="quantity">
       <option value="" disabled selected>Choose your option</option>
-      <option value="1">1</option>
+      <option selected value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
     </select>
@@ -140,10 +155,6 @@ $.ajax({
             </div>
           </div>
         </div>`
-
-
-
-
 
     )
 

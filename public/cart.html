@@ -50,15 +50,14 @@
             <table>
                 <thead>
                     <tr>
-                        <th>The Vinyl</th>
-                        <th>The Artist</th>
+                        <th>Product</th>
                         <th>Price</th>
                         <th>Quantity</th>
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr>
+                <tbody id="cartTable">
+                    <!-- <tr>
                         <td><img src="https://images-na.ssl-images-amazon.com/images/I/81UWfPobkoL._AA100_.jpg"></td>
                         <td>Michael Jackson</td>
                         <td>$50.00</td>
@@ -66,39 +65,28 @@
                             <div class="input-field col s12">
                                 <select>
                                     <div>
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
                                     </div>
                                 </select>
                                 <label>QTY</label>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 
 
 
-            <p>Subtotal ( items): <span class="price" style="color:black"><b>$30</b></span></p>
+
+            <p>Subtotal: <span class="price" id="price" style="color:black"><b>$30</b></span></p>
         </div>
         <div class=container>
-        <a class="waves-effect waves-light btn-small" id="checkout">CHECKOUT</a>
+            <a class="waves-effect waves-light btn-small" id="checkout">CHECKOUT</a>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
     </div>
     </div>
 
@@ -108,7 +96,7 @@
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/app.js"> </script>
+    <script src="js/cart.js"></script>
 
 </body>
 
