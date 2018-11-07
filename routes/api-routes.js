@@ -68,20 +68,38 @@ router.post("/api/cart", function(req, res){
 
 //remove all items from the cart
 
-router.delete('/api/cart/', function(req, res) {
-    db.cart.findAll({}).then(function(response, error){
-      if (error) {
-        res.json(error)
-      }
-      res.json(response)
-    })
-  });
+// router.delete('/api/cart/', function(req, res) {
+//     db.cart.findAll({}).then(function(response, error){
+//       if (error) {
+//         res.json(error)
+//       }
+//       res.json(response)
+//     })
+//   });
 
+router.delete('/api/cart', function(req, res){
+  db.cart.destroy({
+    where: {},
+    truncate: true
+  })
+.then(function(dbCart) {
+  res.json(dbCart);
+}).catch(function(error) {
+  res.json({ error: error });
+});
+})
+
+// db.cart.destroy(
+//   {where: undefined},
+//   {truncate: false}
+// ).then(() => {
+//   return 
+// }).then(() => done());
 
 
 //delete individual item from the cart
 router.delete('/api/cart/:id', function(req, res) {
-  cart.destroy({
+  db.cart.destroy({
     where: {
       id: req.params.id
     }

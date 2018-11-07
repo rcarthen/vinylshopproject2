@@ -64,6 +64,19 @@
 padding: 35px;
 
 }
+
+#tagline{
+  font-size: 18px;
+}
+
+#social{
+  margin: .2%;
+}
+
+#seeinfo{
+  background-color: black;
+  color: whitesmoke;
+}
 /* 
      #cardinfo{ height: 40vh;
               width: 40vh;
