@@ -47,6 +47,7 @@
 
      #delete{
        background-color: black;
+       size: 5%
      }
 
      #card{ height: 65vh;

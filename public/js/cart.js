@@ -19,7 +19,6 @@ const renderCart = function () {
         url: "/api/cart",
         method: "GET"
     }).then(function (data) {
-        console.log("Hello", data);
         //id cartTable 
         let subtotal = 0
         for (let i = 0; i < data.length; i++) {
