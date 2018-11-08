@@ -1,3 +1,4 @@
+///module.exports to create my vinyly-product table
 module.exports = function(sequelize, DataTypes) {
   const vinyl = sequelize.define('vinyl', {
     vinyl_name: {

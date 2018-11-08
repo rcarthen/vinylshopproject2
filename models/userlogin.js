@@ -1,3 +1,5 @@
+/// module.export to create a userlogin table
+
 module.exports = function(sequelize, DataTypes) {
     const userlogin = sequelize.define('userlogin', {
       firstname: {

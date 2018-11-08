@@ -49,7 +49,7 @@ $('#displayrow').on('click', ".addtobag", function (event) {
 });
 
 
-// GET ajax call to display one vinyl/product at a time before customer add to cart.
+// GET ajax call to display one vinyl/product at a time before customer adds item to cart.
 
 $('#displayrow').on('click', ".seeinfo", function (event) {
   event.preventDefault();

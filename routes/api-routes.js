@@ -28,17 +28,16 @@ router.get('/api/vinyl/:id', function (req, res) {
   })
 });
 
-
+///get route to retrieve all data from the userlogin
 // router.get('/api/userlogin', function (req, res) {
 //   db.userlogin.findAll({}).then(function (response, error) {
-//     if (error) {
-//       res.json(error)
-//     }
-//     res.json(response)
-//   })
+//     if (error) {   res.json(error) }
+//         res.json(response)
+//  })
 // });
 
 
+/// get call to acces all products in the cart table
 router.get("/api/cart", function (req, res) {
   db.cart.findAll({}).then(function (response, error) {
     if (error) {
@@ -59,7 +58,7 @@ router.post("/api/cart", function (req, res) {
   });
 })
 
-//remove all items from the cart
+//remove all items from the cart using truncate to delete all items in the table
 router.delete('/api/cart', function (req, res) {
   db.cart.destroy({
       where: {},
@@ -74,7 +73,7 @@ router.delete('/api/cart', function (req, res) {
     });
 })
 
-//route to delete individual item from the cart
+//route to delete individual item from the cart by id 
 router.delete('/api/cart/:id', function (req, res) {
   db.cart.destroy({
     where: {
